@@ -1,0 +1,54 @@
+.container .pager li a {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    overflow: hidden;
+    width: 100%
+}
+
+@media (min-width: 768px) {
+    .container .pager li a {
+        width: 45%
+    }
+}
+
+.container .pager li a div {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.intro-header .post-heading .meta, .post-preview > .post-meta {
+    font-style: normal;
+}
+
+img.emoji {
+    display: inline
+}
+
+.readme .markdown-body, .readme .plain {
+    background-color: #fff;
+    padding: 30px
+}
+
+.gist .line-pre .line {
+    line-height: 16px !important
+}
+
+.gist .line-data, .gist .line-numbers {
+    border-top: 0
+}
+
+.gist .table-hover>tbody>tr:hover {
+    background-color: inherit
+}
+
+
+.middot-divider {
+    display: inline-block;
+    padding: 0 .42em
+}
+
+.middot-divider:after {
+    content: '·'
+}

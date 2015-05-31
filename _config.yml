@@ -1,0 +1,67 @@
+# Site settings
+title: Brentley Jones
+header-img: img/home-bg.jpg
+email: contact@brentleyjones.com
+description: "Brentley Jones' personal blog where he writes about iOS development among other things."
+baseurl: ""
+url: "http://brentleyjones.com"
+twitter_username: brentleyjones
+github_username:  brentleyjones
+facebook_username:
+google_analytics_key: UA-63601318-1
+google_webmaster_key:
+
+# Build settings
+markdown: redcarpet
+highlighter: pygments
+permalink: /:year/:month/:day/:title
+paginate: 10
+exclude: [
+	"less",
+	"CNAME",
+	"Rakefile",
+	"Gemfile",
+	"Gemfile.lock",
+	".sass-cache",
+	".gitignore",
+	"node_modules",
+	"Gruntfile.js",
+	"package.json",
+	"README.md",
+	]
+
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: America/Chicago
+
+redcarpet:
+  extensions: [footnotes]
+
+# Gems
+gems:
+  - jekyll-sitemap
+  - jekyll-mentions
+  - jemoji
+
+jekyll-mentions:
+  base_url: https://twitter.com
+
+# Defaults
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  -
+    scope:
+      path: ""
+      type: "drafts"
+    values:
+      layout: "post"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"

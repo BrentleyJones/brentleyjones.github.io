@@ -1,0 +1,44 @@
+---
+layout: page
+description: "iOS Engineer, Movie Lover, d20 Thrower"
+---
+
+{% for post in paginator.posts %}
+<div class="post-preview">
+    <a href="{{ post.url | prepend: site.baseurl }}">
+        <h2 class="post-title">
+            {{ post.title }}
+        </h2>
+        {% if post.subtitle %}
+        <h3 class="post-subtitle">
+            {{ post.subtitle }}
+        </h3>
+        {% endif %}
+    </a>
+    <div class="post-meta">
+      <time itemprop="datePublished" datetime="{{ post.date }}">{{ post.date | date: "%B %-d, %Y" }}</time><span class="middot-divider"></span><span data-toggle="tooltip" data-placement="bottom" title="" data-original-title="{{ post.content | strip_html | number_of_words }} words">{% capture reading_time %}{{ post.content | strip_html | number_of_words | plus:91 | divided_by:180 }}{% endcapture %}{% if reading_time <= '1' %}{{ '1' | append:' minute read' }}{% else %}{{ reading_time | append:' minutes read' }}{% endif %}</span>
+    </div>
+    {{ post.excerpt }}
+    {% if post.content != post.excerpt %}<p><a href="{{ post.url | prepend: site.baseurl }}">Read more…</a></p>{% endif %}
+</div>
+{% if forloop.last == false %}
+<hr>
+{% endif %}
+{% endfor %}
+
+<!-- Pager -->
+{% if paginator.total_pages > 1 %}
+<hr>
+<ul class="pager">
+    {% if paginator.previous_page %}
+    <li class="previous">
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+    </li>
+    {% endif %}
+    {% if paginator.next_page %}
+    <li class="next">
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+    </li>
+    {% endif %}
+</ul>
+{% endif %}

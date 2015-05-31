@@ -1,0 +1,69 @@
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+    {% if page.robots %}
+    <meta name="robots" content="{{ page.robots }}">
+    {% endif %}
+
+    <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+    {% comment %}
+    The meta tag below is useful when you want to verify the website to
+    Google web-master tools in an alternative way. Simply configure your site verification key on
+    _config.yml given by Google web-master tools.
+    {% endcomment %}
+
+    {% if site.google_webmaster_key %}
+    <meta name="google-site-verification" content="{{ site.google_webmaster_key }}" />
+    {% endif %}
+
+    <link rel="alternate" type="application/rss+xml" href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    {% if page.previous.url %}
+    <link rel="prev" href="{{ page.previous.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" title="{{ page.previous.title }}">
+    {% endif %}
+    {% if page.next.url %}
+    <link rel="next" href="{{ page.next.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" title="{{ page.next.title }}">
+    {% endif %}
+
+    {% comment %}
+    https://developer.mozilla.org/en-US/docs/Web/HTTP/Link_prefetching_FAQ
+    {% endcomment %}
+    <link rel="prefetch" href="{{ site.url }}">
+    {% if page.previous.url %}
+    <link rel="prefetch" href="{{ page.previous.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    {% endif %}
+    {% if page.next.url %}
+    <link rel="prefetch" href="{{ page.next.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    {% endif %}
+    {% endif %}
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | prepend: site.baseurl }}">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ "/css/clean-blog.css" | prepend: site.baseurl }}">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="{{ "/css/syntax.css" | prepend: site.baseurl }}">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Override CSS -->
+    <link rel="stylesheet" href="{{ "/css/custom.css" | prepend: site.baseurl }}">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
