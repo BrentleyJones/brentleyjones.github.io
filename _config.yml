@@ -34,7 +34,10 @@ exclude: [
 timezone: America/Chicago
 
 redcarpet:
-  extensions: [footnotes]
+  extensions: [
+	footnotes,
+	with_toc_data,
+	]
 
 # Gems
 gems:

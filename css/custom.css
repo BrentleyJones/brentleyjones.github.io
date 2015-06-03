@@ -52,3 +52,14 @@ img.emoji {
 .middot-divider:after {
     content: '·'
 }
+
+/***
+ * Anchor CSS
+ ***/
+
+ .anchorjs-link {
+   transition: all .2s ease-in-out;
+ }
+ .anchorjs-link:hover {
+   text-decoration: none;
+ }
