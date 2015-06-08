@@ -103,3 +103,9 @@ Now though, giving Swift has entered the picture, I think that it’s still too 
 I think this year’s WWDC will be a good one. If I’m 100% correct with my predictions it might not be *as* good as last year (it’s hard to top Swift), but it certainly has potential of being as good or better if they surprise us again.
 
 I’ll probably be tweeting during the Keynote if you want to hear my thoughts in realtime. Otherwise I’ll be back sometime Monday to report back how well I did on my predictions.
+
+----
+
+### Update June 7th
+
+After talking about my predictions with some more people I realize there is an opportunity for Apple to have the Native Watch SDK and/or TVKit be in Swift. Since they are different “platforms” there is less need to make sure they can interop with Objective-C. Also, since they would require a deployment target of iOS 9 (or the equivalent in a different OS) they could utilize Swift being built into the operating system.
