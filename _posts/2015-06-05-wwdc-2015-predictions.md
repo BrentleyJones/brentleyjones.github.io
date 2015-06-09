@@ -70,9 +70,9 @@ While Swift-based APIs would be possible if they bundle the Swift runtime with t
 
 This is one that people have wanted for a while and I’m not sure if it’s going to happen yet. With the introduction of extensions last year we have lots of ways to improve the system with little bits of runnable code. One of those ways could be Siri-based extensions.
 
-### Force Press API on iOS
+### Force Touch API on iOS
 
-This one I was on the fence about. We have Force Press APIs for OS X, and we will have them for Apple Watch with the Native SDK.  We will (probably) have iPhones and iPads with Force Press later this year. So why don’t I think they will give us access to this now? Apple doesn’t give us access to new SDKs or APIs until the required hardware has been announced. This would basically announce a feature for the next iOS devices before the devices themselves are announced.
+This one I was on the fence about. We have Force Touch APIs for OS X, and we will have them for Apple Watch with the Native SDK.  We will (probably) have iPhones and iPads with Force Press later this year. So why don’t I think they will give us access to this now? Apple doesn’t give us access to new SDKs or APIs until the required hardware has been announced. This would basically announce a feature for the next iOS devices before the devices themselves are announced.
 
 ## Won’t be announced :thumbsdown:
 
