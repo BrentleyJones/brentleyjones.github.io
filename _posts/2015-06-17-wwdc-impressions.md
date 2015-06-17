@@ -44,7 +44,7 @@ do {
 }
 ```
 
-You can use `try` without `catch`, or re-`throw` an error in a catch, but then your function needs to be marked with `throws` as well.
+You can use `try` without `catch`, or re-`throw` an error in a catch, but then your function needs to be marked with `rethrows`.
 
 There is a lot more to the error handling, but that’s too much to go into right now. I highly recommend looking into it since it’s the biggest change in Swift 2.0.
 
@@ -80,7 +80,7 @@ Utilizing xcasset catalogs, including their new support for arbitrary data files
 
 Finally with On Demand Resources you can tag your resources into arbitrary groups. Then you can have certain groups pre-downloaded as part of the installation and the rest only downloaded on demand. These groups can be reclaimed from the cache by the system allowing many more applications to share the same space. This is really useful for all of those 8gb devices out there. I’m just glad that first run experiences will no longer permanently take up space when I can never view them again.
 
-From a user’s perspective though with On Demand Resources, I do wonder about the game levels example which was presented repeatedly. Will there be a standard way to tell the system or app that I want to download all the assets I could possibly need? What if I’m about to board a plane? I want to be able to play all the levels of my game even when I’m offline.
+From a user’s perspective though with On Demand Resources, I do wonder about the game levels example which was presented repeatedly. Will there be a standard way to tell the system or app that I want to download all the assets I could possibly need? What if I’m about to board a plane? I want to be able to play all the levels of my game even when I’m offline. 
 
 ## WatchKit
 
